@@ -13,13 +13,13 @@ const RootLayout = ({
 }: Readonly<{
   children: ReactNode;
 }>) => (
-  <ClerkProvider>
-    <html lang="en">
-      <body className="antialiased">
+  <html lang="en">
+    <body className="antialiased">
+      <ClerkProvider>
         <ConvexClientProvider>{children}</ConvexClientProvider>
-      </body>
-    </html>
-  </ClerkProvider>
+      </ClerkProvider>
+    </body>
+  </html>
 );
 
 export default RootLayout;
