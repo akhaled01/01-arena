@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 const Page = () => (
   <>
     <Authenticated>{redirect("/arena")}</Authenticated>
-    <Unauthenticated>{redirect("/sign-in")}</Unauthenticated>
+    <Unauthenticated>{redirect("/auth/sign-in")}</Unauthenticated>
   </>
 );
 
