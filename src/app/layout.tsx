@@ -1,6 +1,7 @@
 import ConvexClientProvider from "@/lib/providers/convex-clerk";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
+import { dark } from "@clerk/themes";
 import { ReactNode } from "react";
 import "./globals.css";
 
@@ -14,8 +15,8 @@ const RootLayout = ({
   children: ReactNode;
 }>) => (
   <html lang="en">
-    <body className="antialiased">
-      <ClerkProvider>
+    <body className="antialiased dark">
+      <ClerkProvider appearance={{ baseTheme: dark }}>
         <ConvexClientProvider>{children}</ConvexClientProvider>
       </ClerkProvider>
     </body>
